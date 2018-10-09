@@ -70,7 +70,6 @@ For our project, we want to be able to transfer the style of an image, specifica
   </ul>
 <br>
 
-
 <h4 style = "text-align: center">Examples of style transfer, with static image and video</h4>
 
 <div style = "text-align: center">
@@ -78,13 +77,20 @@ For our project, we want to be able to transfer the style of an image, specifica
   <img style = "width: 47%; height:100%" src= "images/style_transfer_ex1.gif">
 </div>
 
+This general procedure has been done before, as evidenced by the examples. However, there are not many apps that handle this functionality, and there are no apps that are able to do direct, live style transfer. We will be attempting to implement all of these goals, and hopefully succeeding in all including the last
+
 <br><br>
 
 <!-- Approach -->
 <h3>Approach</h3>
-Describe very clearly and systematically your approach to solve the problem. Tell us exactly what existing implementations you used to build your system. Tell us what obstacles you faced and how you addressed them. Justify any design choices or judgment calls you made in your approach.
-
+To implement style transfer we will be looking at the following papers:
 <br><br>
+<ul>
+  <li><a href = "https://arxiv.org/pdf/1508.06576v2.pdf">A Neural Algorithm of Artistic Style</a></li>
+  <li><a href = "https://arxiv.org/pdf/1603.08155.pdf">Perceptual Losses for Real-Time Style Transfer and Super-Resolution</a></li>
+</ul>
+<br><br>
+
 <!-- Experiments and Results -->
 <h3>Experiments and results</h3>
 Provide details about the experimental set up (number of images/videos, number of datasets you experimented with, train/test split if you used machine learning algorithms, etc.). Describe the evaluation metrics you used to evaluate how well your approach is working. Include clear figures and tables, as well as illustrative qualitative examples if appropriate. Be sure to include obvious baselines to see if your approach is doing better than a naive approach (e.g. for classification accuracy, how well would a classifier do that made random decisions?). Also discuss any parameters of your algorithms, and tell us how you set the values of those parameters. You can also show us how the performance varies as you change those parameter values. Be sure to discuss any trends you see in your results, and explain why these trends make sense. Are the results as expected? Why?
