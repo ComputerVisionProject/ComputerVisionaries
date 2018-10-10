@@ -83,22 +83,45 @@ This general technique has been done before, as evidenced by the examples. Howev
 
 <!-- Approach -->
 <h3>Approach</h3>
-Describe very clearly and systematically your approach to solve the problem.
-Tell us exactly what existing implementations you used to build your system.
-Tell us what obstacles you faced and how you addressed them.
-Justify any design choices or judgment calls you made in your approach.
-<h4>Style Transfor for Images</h4>
-<h4>Style Transfor for Videos</h4>
+Applying a style transfer involves making use of two images, one for its content and one for its style,
+and applying a texture to the content image that matches the style of the style image.
+This process generally involves tuning a Convolutional Neural Network (CNN) to minimize some combination of
+style loss and content loss, as can be seen in [1].
+However, optimizing this function to get good results can take a couple of hours with an
+everyday computer.
+Achieving our goals requires optimizing multiple parts of the general style transfer
+algorithm:
+
+<h4>Style Transfer for Images</h4>
+To achieve this goal, we plan on making use of the algorithm in [2] and adding
+a feature extraction/dimensionality reduction front-end to achieve faster runtimes:
+Their algorithm, running on a GTX Titan X GPU, takes at most 0.21s to converge,
+which will be much slower running on an average smartphone. The high level
+pipeline will look like the following:
+<br>
+<br>
+input image->feature extraction->image transform network-> CNN Loss Minimization Network
+<br>
+<br>
+We will implement the image transformation network mentioned in the paper,
+and we will use the <a href="http://www.robots.ox.ac.uk/~vgg/research/very_deep/" target="_blank">VGG Network</a>
+as our loss minimization network, minimizing a linear combination of
+style loss and content loss as mentioned in [1].
+
+<h4>Style Transfer for Videos</h4>
+We plan on approaching this goal by treating it as an extension of the previous.
+
+
 <br>
 <br>
 Relevant papers and articles:
 <br>
-<ul>
+<ol>
   <li><a href = "https://arxiv.org/pdf/1508.06576v2.pdf" target="_blank">A Neural Algorithm of Artistic Style</a></li>
   <li><a href = "https://arxiv.org/pdf/1603.08155.pdf" target="_blank">Perceptual Losses for Real-Time Style Transfer and Super-Resolution</a></li>
-  <li><a href = "https://medium.com/element-ai-research-lab/stabilizing-neural-style-transfer-for-video-62675e203e42" target="_blank">Stabilizing Neural Style-Transfer for Video</a></li>
+  <li><a href = "https://medium.com/element-ai-research-lab/stabilizing-neural-style-transfer-for-video-62675e203e42" target="_blank">Stabilizing Neural Style Transfer for Video</a></li>
   <li><a href = "https://medium.com/element-ai-research-lab/introducing-mur-ai-c056b6a31856" target="_blank">Real-Time Neural Style Transfer for Video</a></li>
-</ul>
+</ol>
 <br>
 
 <!-- Experiments and Results -->
