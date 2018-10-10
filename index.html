@@ -130,19 +130,42 @@ Relevant papers and articles:
 
 <!-- Experiments and Results -->
 <h3>Experiment and Results</h3>
-  This project can be viewed as two parts, the first is the actual creation of the style transfer application and the second is the experiment to test how well the application performed. In the creation of the application, we will be leveraging a pretrained convolutional network such as VGGNet. Outside of that, all code for the transfer of images will be written using the techniques and papers described in the approach section.In the experiment, we will give the users/subjects pictures and videos, with ranging complexities, to have the style transferred from the original image/video to that of a given template. In this context, the complexity of an image can be view as "how busy is an image?" For example, a picture of a single fruit would be defined as less complex than a photo of a city street with lots of pedestrians and vehicles. Given the largely subjective nature of evaluating the quality of a style transfer, for each image we will ask users to rate the style transfer on a scale of 1 to 5 for the following criteria.
+  This project can be viewed as two parts, the first is the actual creation of the style transfer application and the second is the experiment to test how well the application performed. In the creation of the application, we will be leveraging a the algorithms described in the papers/articles provided above ([1], [2], [3]) but we will be modifying our application as described in the Approach section.
+  <br>
+  <br>
+   In the experiment, we will give the users/subjects pictures and videos, with ranging complexities, to have the style transferred from the original image/video to that of a given template. In this context, the complexity of an image can be viewed as "how busy is an image?" For example, a picture of a single fruit would be defined as less complex than a photo of a city street with lots of pedestrians and vehicles. The images we will use to train the transformation network will be from the Microsoft COCO dataset as described in [2]. We will be hand selecting the images used as style images based on whether or not it is visually appealing and of a distinct, recognizable style. Given the largely subjective nature of evaluating the quality of a style transfer, for each image we will ask, in a survey, for users/subjects to rate the style transfer on a scale of 1 to 5 for the following criteria.
   <h5>For both image and video</h5>
   <ul>
-    <li>How acceptable is the time taken for processing the style transfer</li>
-    <li>Overall quality of image produced</li>
-    <li>How related the style of the generated image is with the desired style</li>
-    <li>How related the content of the generated image is with the original</li>
+    <li>How acceptable is the time taken for processing the style transfer 
+    	<ul>
+    		<li>5 being the most acceptable and 1 being the least acceptable</li>
+    	</ul>
+    </li>
+    <li>Overall quality of image produced 
+    	<ul>
+    		<li>5 being the best quality and 1 being the worst quality</li>
+    	</ul>
+    </li>
+    <li>How related the style of the generated image is with the desired style 
+    	<ul>
+    		<li>5 being the generated style completely matches the desired style and 1 being the generated style does not match the desired style at all</li>
+    	</ul>
+    </li>
+    <li>How related the content of the generated image is with the original 
+    	<ul>
+    		<li>5 being the content of the generated image is completely related to the content of the original image and 1 being the content of the generated image is not related to the content of the original image</li>
+    	</ul>
+    </li>
   </ul>
   <h5>For only video</h5>
   <ul>
-    <li>Overall continuity of the video i.e. was the video skipping significantly between frames? not maintining a certain style? etc..</li>
+    <li>Overall continuity of the video i.e. was the video skipping significantly between frames? not maintining a certain style? etc.. 
+    	<ul>
+    		<li>5 being perfect continuity and 1 being no  continuity</li>
+    	</ul>
+    </li>
   </ul>
-  Through these experiments we hope to learn the strengths and weakness of the different techniques and hopefully determine which is best in general. Overall, this project will be considered a success if we are able to implement and application the is able to perform real-time style transfer for videos and receive relatively good reviews from our users.
+  Through these experiments we hope to learn the strengths and weakness of the different techniques and hopefully determine which is best in general for transferring a style onto an image or video. Overall, this experiment will be considered a success if we are able to implement an application that is able to perform real-time style transfer for videos and receive relatively good reviews from our users (an average of 3.5 or above in each section of the survey).
 <br>
 
 
