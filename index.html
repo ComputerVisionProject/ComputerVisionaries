@@ -9,6 +9,9 @@
 
 <!-- Le styles -->
   <link href="css/bootstrap.css" rel="stylesheet">
+  <<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 <style>
 body {
 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -126,9 +129,30 @@ Relevant papers and articles:
 <br>
 
 <!-- Experiments and Results -->
-<h3>Experiments and results</h3>
-Provide details about the experimental set up (number of images/videos, number of datasets you experimented with, train/test split if you used machine learning algorithms, etc.). Describe the evaluation metrics you used to evaluate how well your approach is working. Include clear figures and tables, as well as illustrative qualitative examples if appropriate. Be sure to include obvious baselines to see if your approach is doing better than a naive approach (e.g. for classification accuracy, how well would a classifier do that made random decisions?). Also discuss any parameters of your algorithms, and tell us how you set the values of those parameters. You can also show us how the performance varies as you change those parameter values. Be sure to discuss any trends you see in your results, and explain why these trends make sense. Are the results as expected? Why?
+<h3>Experiment and Results</h3>
+  This project can be viewed as two parts, the first is the actual creation of the style transfer application and the second is the experiment to test how well the application performed. In the creation of the application, we will be leveraging a pretrained convolutional network such as VGGNet. Outside of that, all code for the transfer of images will be written using the techniques and papers described in the approach section.In the experiment, we will give the users/subjects pictures and videos, with ranging complexities, to have the style transferred from the original image/video to that of a given template. In this context, the complexity of an image can be view as "how busy is an image?" For example, a picture of a single fruit would be defined as less complex than a photo of a city street with lots of pedestrians and vehicles. Given the largely subjective nature of evaluating the quality of a style transfer, for each image we will ask users to rate the style transfer on a scale of 1 to 5 for the following criteria.
+  <h5>For both image and video</h5>
+  <ul>
+    <li>How acceptable is the time taken for processing the style transfer</li>
+    <li>Overall quality of image produced</li>
+    <li>How related the style of the generated image is with the desired style</li>
+    <li>How related the content of the generated image is with the original</li>
+  </ul>
+  <h5>For only video</h5>
+  <ul>
+    <li>Overall continuity of the video i.e. was the video skipping significantly between frames? not maintining a certain style? etc..</li>
+  </ul>
+  Through these experiments we hope to learn the strengths and weakness of the different techniques and hopefully determine which is best in general. Overall, this project will be considered a success if we are able to implement and application the is able to perform real-time style transfer for videos and receive relatively good reviews from our users.
+<br>
 
+
+
+
+<!-- When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+<br>
+Experiments and results: Describe the experimental setup you will follow, which datasets you will use, which existing code you will exploit, what you will implement yourself, and what you would define as a success for the project. If you plan on collecting your own data, describe what data collection protocol you will follow. Provide a list of experiments you will perform. Describe what you expect the experiments to reveal, or what is uncertain about the potential outcomes.
+ -->
   <hr>
   <footer>
   <p>© Rishab Kaup, Karthik Praturu, Noah Sutter and Austen Schunk</p>
